@@ -538,6 +538,9 @@ footer {
 
 /* Responsive design adjustments */
 @media (max-width: 768px) {
+    body {
+        width: 100vh;
+    }
     .content {
         grid-template-columns: 1fr;
         text-align: center;
@@ -545,6 +548,14 @@ footer {
 
     .intro h1 {
         font-size: 2.5rem;
+    }
+
+    div.container-pictures {
+        width: 60%;
+    }
+
+    .description-skill-container {
+        flex-direction: column;
     }
 
     header {

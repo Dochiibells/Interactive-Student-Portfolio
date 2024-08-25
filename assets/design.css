@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rozha+One&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    background: #ffffff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*Targets all the Sections*/
+
+section {
+    height: 100%;
+    padding: 2rem;
+    padding-top: 5em;
+}
+
+.page-title {
+    font-size: 2em;
+}
+
+p {
+    color: #333;
+}
+
+header {
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.115);
+    z-index: 8000; 
+    color: #333;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 15px;
+    width: 100%;
+}
+
+header .logo-top {
+    padding-left: 35px;
+    width: 80px;
+    font-family: "Pacifico", cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: auto;
+    color: #000;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.5em;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a, #title-logo {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    border-bottom: 2.5px solid #4467ff;
+}
+
+
+section.front {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.intro {
+    text-align: left;
+}
+
+.introduction {
+    line-height: 4.5em;
+}
+
+.intro h1 {
+    width: 10em;
+    font-size: 3.5rem;
+    color: #000;
+    margin: 0;
+}
+
+.intro h1 span#name {
+    color: #00a8e8;
+}
+
+span#typewriter {
+    height: 72px;
+}
+
+#typewriter {
+    color: #000;
+    overflow: hidden; 
+    display: inline-block;
+    min-width: 400px; 
+    white-space: nowrap; 
+    overflow: hidden;
+    letter-spacing: 0.1em; 
+}
+  
+
+.btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    background-color: #00a8e8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.profile-pic {
+    padding: 0;
+    position: relative;
+    width: 470px; 
+    height: 470px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.profile-blob {
+    width: 100%;
+    height: 100%;
+}
+
+.profile-blob image {
+    clip-path: circle(70% at 60% 50%);
+    object-fit: cover;
+}
+
+.page-links {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.8em;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+social-links a:hover {
+    color: #4467ff;
+}
+
+
+
+/* CSS for the About Section */
+.about_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    height: 100%;   
+}
+
+.about-description {
+    margin-top: 2em;
+}
+
+.about_text {
+    font-size: 1.1em;
+}
+
+
+/* Picture transition */
+.card {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    perspective: 2500px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 0;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    background: #000;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.wrapper img {
+    border-radius: 30px;
+    box-shadow:rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.card:hover .wrapper {
+    transform:  perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(to top,transparent 46% rgba(12, 13, 19,0.5) 60% rgba(12, 13, 19) 97%);
+}
+
+.wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(to bottom,transparent 46% rgba(12, 13, 19,0.5) 60% rgba(12, 13, 19) 97%);
+}
+
+.card:hover .wrapper::before, 
+.wrapper::after {
+    opacity: 1;
+}
+
+.card:hover .wrapper::after {
+    height: 120px;
+}
+
+.card:hover .cover-image {
+    opacity: 0.3;
+}
+
+.character {
+    width: 100%;
+    height: 450px;
+    opacity: 0;
+    transition: all 0.5s;
+    filter: drop-shadow(2px 2px 2px #000);
+    position: absolute;
+    z-index: -1;
+}
+
+.card:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -50px, 100px);
+}
+
+section.about-container {
+    width: 100%;
+    height: 100%;
+}
+
+section img {
+    height: 30em;
+}
+
+section h2 {
+    color: #00a8e8;
+}
+
+section p.about_text {
+    line-height: 2.5em;
+    text-align:center;
+}
+
+/*Css for Skills Page*/
+
+.skills-container {
+    height: 100%;
+}
+
+.description-skill-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5em;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.skills-container ul li {
+    font-size: 1.2em;
+    list-style-type: none;
+    color: #333;
+}
+
+section h3 {
+    font-size: 1.5em;
+}
+
+.skill-bar {
+    background: #ddd;
+    border-radius: 4px;
+    height: 10px;
+    width:  28em;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bar {
+    background: #4caf50;
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.4s ease;
+}
+
+/*Image Slider for my works*/
+
+.container-pictures {
+    margin: 40px 0 0 200px;
+    width: 70%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}  
+
+.container-pictures img {
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: #000000 2px solid;
+    transition: all ease-in-out 0.5s;
+}
+
+.container-pictures img:hover {
+    width: 25%;
+    border: #4467ff 3px solid;
+    box-shadow: 0 0 15px rgba(68, 103, 255, 0.8);
+}
+
+/*Page transition*/
+
+section, .header-elements {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/*Contact Page*/
+
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+.contact-email {
+    font-size: 3.5em;
+    background: linear-gradient(to right, #18a3f4, #182B3A);
+    background-clip: text;
+    color: transparent;
+}
+
+#contact-form {
+    padding-top: 30px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+    width: 80%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px 0;
+    border: none; 
+    border-bottom: 2px solid #007BFF;
+    background-color: transparent;
+    font-size: 1rem;
+    outline: none;
+    color: #333;
+    transition: border-color 0.3s ease;
+  }
+
+  textarea {
+    resize: none;
+    height: 120px;
+  }
+  
+  input:focus, textarea:focus {
+    border-bottom: 2px solid #0056b3; /* Darker blue on focus */
+  }
+  
+  /* Floating Label */
+  label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 1rem;
+    color: #666;
+    pointer-events: none;
+    transition: 0.3s ease all;
+  }
+  
+  input:focus + label, input:not(:placeholder-shown) + label,
+  textarea:focus + label, textarea:not(:placeholder-shown) + label {
+    top: -20px;
+    font-size: 0.85rem;
+    color: #007BFF; /* Change label color when floating */
+  }
+  
+  /* Button Styling */
+  button[type="submit"] {
+    padding: 12px 30px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+
+/*Footer*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem; 
+}
+
+.social-links a {
+    font-size: 1.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+
+
+#icon {
+    transition: color 0.3s ease;
+}
+
+#icon:hover {
+    color: #00a8e8;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .profile-pic img {
+        max-width: 250px;
+    }
+}

@@ -497,6 +497,7 @@ section, .header-elements {
     font-size: 1rem;
     transition: background-color 0.3s ease;
   }
+
   
   button[type="submit"]:hover {
     background-color: #0056b3;

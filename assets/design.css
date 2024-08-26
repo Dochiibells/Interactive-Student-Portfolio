@@ -38,7 +38,8 @@ section {
 }
 
 .page-title {
-    font-size: 2em;
+    font-size: 2.2em;
+    color:  #00a8e8;
 }
 
 p {
@@ -94,7 +95,7 @@ nav ul li a, #title-logo {
 }
 
 nav ul li a.active, nav ul li a:hover {
-    border-bottom: 2.5px solid #4467ff;
+    border-bottom: 2.5px solid  #00a8e8;
 }
 
 
@@ -196,119 +197,51 @@ social-links a:hover {
     color: #4467ff;
 }
 
-
-
 /* CSS for the About Section */
 .about_container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center; 
+    justify-content: space-evenly;
     height: 100%;   
-}
-
-.about-description {
-    margin-top: 2em;
-}
-
-.about_text {
-    font-size: 1.1em;
-}
-
-
-/* Picture transition */
-.card {
-    width: 300px;
-    height: 400px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 5px;
-    perspective: 2500px;
-    cursor: pointer;
-    border-radius: 30px;
     margin: 0;
 }
 
-.cover-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.about-description {
+    display: flex;
+    flex-direction: column;
+    width: 50em;
 }
 
-.wrapper {
-    transition: all 0.5s;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-    background: #000;
-    border-radius: 30px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+.about-name-container {
+    margin: -1em 0 0 -10em;
 }
 
-.wrapper img {
-    border-radius: 30px;
-    box-shadow:rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+.about-name {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serifs;
+    font-size: 7em;
+    width: 5em;
+    line-height: 1em;
+    animation: gradientTransition 1s ease-in-out forwards;
 }
 
-.card:hover .wrapper {
-    transform:  perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+.about-text-container {
+    display: flex;
+    justify-content: end;
+    width: 45em;
 }
 
-.wrapper::before,
-.wrapper::after {
-    content: "";
-    opacity: 0;
-    width: 100%;
-    height: 80px;
-    transition: all 0.5s;
-    border-radius: 30px;
-    position: absolute;
-    left: 0;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+.about-text {
+    text-align: end;
+    font-size: 1em;
+    line-height: 2em;
+    width: 35em;
 }
 
-.wrapper::before {
-    top: 0;
-    height: 100%;
-    background-image: linear-gradient(to top,transparent 46% rgba(12, 13, 19,0.5) 60% rgba(12, 13, 19) 97%);
-}
-
-.wrapper::after {
-    bottom: 0;
-    opacity: 1;
-    background-image: linear-gradient(to bottom,transparent 46% rgba(12, 13, 19,0.5) 60% rgba(12, 13, 19) 97%);
-}
-
-.card:hover .wrapper::before, 
-.wrapper::after {
-    opacity: 1;
-}
-
-.card:hover .wrapper::after {
-    height: 120px;
-}
-
-.card:hover .cover-image {
-    opacity: 0.3;
-}
-
-.character {
-    width: 100%;
-    height: 450px;
-    opacity: 0;
-    transition: all 0.5s;
-    filter: drop-shadow(2px 2px 2px #000);
-    position: absolute;
-    z-index: -1;
-}
-
-.card:hover .character {
-    opacity: 1;
-    transform: translate3d(0%, -50px, 100px);
+.my-photo {
+    width: 23em;
+    height: 30em;
 }
 
 section.about-container {
@@ -360,23 +293,6 @@ section h3 {
     font-size: 1.5em;
 }
 
-.skill-bar {
-    background: #ddd;
-    border-radius: 4px;
-    height: 10px;
-    width:  28em;
-    margin-top: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
-.bar {
-    background: #4caf50;
-    height: 100%;
-    border-radius: 4px;
-    transition: width 0.4s ease;
-}
-
 /*Image Slider for my works*/
 
 .container-pictures {
@@ -393,13 +309,13 @@ section h3 {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    border: #000000 2px solid;
+    border: #000000  0.5px solid;
     transition: all ease-in-out 0.5s;
 }
 
 .container-pictures img:hover {
     width: 25%;
-    border: #4467ff 3px solid;
+    border: #4467ff 2px solid;
     box-shadow: 0 0 15px rgba(68, 103, 255, 0.8);
 }
 
@@ -465,10 +381,10 @@ section, .header-elements {
   }
   
   input:focus, textarea:focus {
-    border-bottom: 2px solid #0056b3; /* Darker blue on focus */
+    border-bottom: 2px solid #0056b3; 
   }
   
-  /* Floating Label */
+
   label {
     position: absolute;
     top: 10px;
@@ -483,13 +399,13 @@ section, .header-elements {
   textarea:focus + label, textarea:not(:placeholder-shown) + label {
     top: -20px;
     font-size: 0.85rem;
-    color: #007BFF; /* Change label color when floating */
+    color:  #00a8e8; 
   }
   
   /* Button Styling */
   button[type="submit"] {
     padding: 12px 30px;
-    background-color: #007BFF;
+    background-color:  #00a8e8;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -521,13 +437,8 @@ footer {
 
 .social-links a {
     font-size: 1.8em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: #333;
 }
-
-
 
 #icon {
     transition: color 0.3s ease;
